@@ -16,7 +16,7 @@ all_stores=[['fabarmory',"https://fabarmory.com/search?q={search_term}&options%5
 
 def parse(url):
     response = requests.get(url[1], headers = headers).text
-    soup = BeautifulSoup(response, 'lxml')
+    soup = BeautifulSoup(response, 'html.parser')
 
     store = url[0]
     product = url[2]
