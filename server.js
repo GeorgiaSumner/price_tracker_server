@@ -14,7 +14,7 @@ app.listen(PORT, () => {
 
 app.get(() => {
   {
-    ("Hello!");
+    console.log("Hello!");
   }
 });
 app.post("/cardSearch", (req, res) => {
