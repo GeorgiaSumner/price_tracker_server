@@ -1,8 +1,8 @@
 FROM node:latest
 WORKDIR /
 COPY . .
-RUN apt-get update || : && apt-get install python -y
-RUN apt-get install python3.9 -y
+RUN apt-get update 
+RUN apt-get install python3
 RUN pip install -r requirements.txt
 # run an install
 RUN npm install
