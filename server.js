@@ -13,9 +13,7 @@ app.listen(PORT, () => {
 });
 
 app.get("/cardSearch", (req, res) => {
-  {
-    console.log("Hello!");
-  }
+  console.log("Hello!");
 });
 app.post("/cardSearch", (req, res) => {
   const input = req.body.searchTerm;
