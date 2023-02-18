@@ -12,11 +12,7 @@ search_term = str(sys.argv[1]).lower()
 
 
 
-all_stores=[['fabarmory',f"https://fabarmory.com/search?q={search_term}&options%5Bprefix%5D=last","product-card product-card--list","money","product-card__title"],
-       ['cardmerchant',f"https://cardmerchant.co.nz/search?page=1&q=%2A{search_term}+flesh+singles%2A", "productCard__lower", "productCard__price", "productCard__title"],
-        ['shufflencut' ,f"https://www.shuffleandcutgames.co.nz/search?q=*{search_term}+flesh+singles*",'product Norm',"productPrice", "productTitle"],
-         ['sushiknight',f"https://sushiknightgaming.com/search?filter.v.availability=1&filter.v.price.gte=&filter.v.price.lte=&sort_by=relevance&q={search_term}&options%5Bprefix%5D=last", "grid__item","price-item price-item--sale price-item--last", "full-unstyled-link"],
-        ['tcgculture', f"https://tcgculture.com/search?page=1&q=%2A{search_term}+flesh%2A","productCard__lower","productCard__price","productCard__title"]]
+all_stores=[['fabarmory',f"https://fabarmory.com/search?q={search_term}&options%5Bprefix%5D=last","product-card product-card--list","money","product-card__title"],['cardmerchant',f"https://cardmerchant.co.nz/search?page=1&q=%2A{search_term}+flesh+singles%2A", "productCard__lower", "productCard__price", "productCard__title"],['shufflencut' ,f"https://www.shuffleandcutgames.co.nz/search?q=*{search_term}+flesh+singles*",'product Norm',"productPrice", "productTitle"],['sushiknight',f"https://sushiknightgaming.com/search?filter.v.availability=1&filter.v.price.gte=&filter.v.price.lte=&sort_by=relevance&q={search_term}&options%5Bprefix%5D=last", "grid__item","price-item price-item--sale price-item--last", "full-unstyled-link"],['tcgculture', f"https://tcgculture.com/search?page=1&q=%2A{search_term}+flesh%2A","productCard__lower","productCard__price","productCard__title"]]
 
 def parse(url):
     response = requests.get(url[1], headers = headers).text
