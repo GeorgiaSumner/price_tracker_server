@@ -15,7 +15,7 @@ app.listen(PORT, () => {
 app.post("/cardSearch", (req, res) => {
   const input = req.body.searchTerm;
 
-  const childPython = spawn("python", ["main.py", input]);
+  const childPython = spawn("python", ["./main.py", input]);
 
   childPython.stdout.on("data", (data) => {
     console.log(`stdout: ${data}`);
