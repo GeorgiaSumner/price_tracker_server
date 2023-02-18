@@ -1,6 +1,6 @@
 FROM node:latest
 
-WORKDIR /app
+WORKDIR /
 COPY . .
 RUN apt-get update || : && apt-get install python -y
 RUN apt-get install python3-pip -y
