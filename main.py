@@ -5,7 +5,7 @@ import sys
 import json
 from multiprocessing import Pool
 
-
+print(sys.version)
 headers = {'User-Agent':'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36'}
 
 search_term = str(sys.argv[1]).lower()
