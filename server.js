@@ -11,6 +11,12 @@ const PORT = process.env.PORT || 8000;
 app.listen(PORT, () => {
   console.log(`Listening on ${PORT}`);
 });
+
+app.get(() => {
+  {
+    ("Hello!");
+  }
+});
 app.post("/cardSearch", (req, res) => {
   const input = req.body.searchTerm;
 
