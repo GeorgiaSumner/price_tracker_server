@@ -12,7 +12,7 @@ app.listen(PORT, () => {
   console.log(`Listening on ${PORT}`);
 });
 
-app.get(() => {
+app.get("/cardSearch", (req, res) => {
   {
     console.log("Hello!");
   }
