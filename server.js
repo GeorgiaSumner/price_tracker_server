@@ -12,13 +12,10 @@ app.listen(PORT, () => {
   console.log(`Listening on ${PORT}`);
 });
 
-app.get("/cardSearch", (req, res) => {
-  console.log("Hello!");
-});
 app.post("/cardSearch", (req, res) => {
   const input = req.body.searchTerm;
 
-  const childPython = spawn("python", ["web_scraping.py", input]);
+  const childPython = spawn("python", ["main.py", input]);
 
   childPython.stdout.on("data", (data) => {
     console.log(`stdout: ${data}`);
