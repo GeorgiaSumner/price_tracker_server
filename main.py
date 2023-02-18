@@ -10,7 +10,7 @@ headers = {'User-Agent':'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHT
 
 search_term = str(sys.argv[1]).lower()
 
-#search_term = input("text here")
+
 
 all_stores=[['fabarmory',f"https://fabarmory.com/search?q={search_term}&options%5Bprefix%5D=last","product-card product-card--list","money","product-card__title"],
        ['cardmerchant',f"https://cardmerchant.co.nz/search?page=1&q=%2A{search_term}+flesh+singles%2A", "productCard__lower", "productCard__price", "productCard__title"],
