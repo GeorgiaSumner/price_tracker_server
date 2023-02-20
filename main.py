@@ -29,6 +29,7 @@ def parse(url):
     product_card = soup.find_all(class_ = product)
     
     if product_card:
+        search_query = search_term.split()
         for card in product_card:
             keyword_filter = card.find(class_ = keywords)
             if  keyword_filter:
@@ -38,7 +39,7 @@ def parse(url):
                 html_soup = BeautifulSoup(htmlStr, 'html.parser')
                 keyword_check = html_soup.text.split(':')[0].strip()
             
-            if search_term in keyword_check.casefold():
+            if all(words in keyword_check.casefold() for words in search_query) :
                 price_filter = card.find(class_ = price)
                 price_check = re.sub("[^\d\.]", "",price_filter.text.split(':')[0].strip())
                 if price_check == "":
