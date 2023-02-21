@@ -18,7 +18,6 @@ app.post("/cardSearch", (req, res) => {
   const childPython = spawn("python3", ["main.py", input]);
 
   childPython.stdout.on("data", (data) => {
-    console.log(`stdout: ${data}`);
     res.send(data);
   });
 
