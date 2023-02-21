@@ -50,8 +50,8 @@ def parse(url):
                     out.append(result)
             else: 
                 out.append(999999)             
-    else: 
-        out.append(999999)  
+
+    out.append(999999)  
     
     for i in range(len(out)):
         if out[i] == "":
