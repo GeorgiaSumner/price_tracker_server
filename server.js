@@ -20,7 +20,6 @@ app.post("/cardSearch", (req, res) => {
   childPython.stdout.on("data", (data) => {
     console.log(`stdout: ${data}`);
     res.send(data);
-    return;
   });
 
   childPython.stderr.on("data", (data) => {
