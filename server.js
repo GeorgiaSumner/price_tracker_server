@@ -13,7 +13,7 @@ app.listen(PORT, () => {
 });
 
 app.post("/cardSearch", async (req, res) => {
-  const input = req.body.searchTerm;
+  const input = await req.body.searchTerm;
 
   const childPython = spawn("python3", ["main.py", input]);
 

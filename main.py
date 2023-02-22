@@ -67,8 +67,9 @@ def parse(url):
 
 
 if __name__ == '__main__':
-    p = Pool(2)
-    p.map(parse, all_stores)                                   
+    p = Pool(1)
+    p.map(parse, all_stores) 
+                                    
                                                
 
 
